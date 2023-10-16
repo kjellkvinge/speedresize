@@ -8,6 +8,7 @@ Run test in docker:
 
 #check out repo
 # run in docker, mount currend dir into docker:
+docker run --rm -it -v $(pwd):/src debian:bookworm /bin/bash
 
 # install deps:
 apt install -y libjpeg62-turbo-dev ca-certificates golang libvips-dev
