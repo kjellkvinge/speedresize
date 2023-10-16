@@ -1,6 +1,6 @@
 module resizehack
 
-go 1.21.1
+go 1.19
 
 require (
 	github.com/davidbyttow/govips/v2 v2.13.0
