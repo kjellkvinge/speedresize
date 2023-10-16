@@ -26,14 +26,10 @@ func main() {
 func generateThumbnailVips(original, thumbnail string) {
 
 	//	defer vips.Shutdown()
-
-	img, err := vips.NewImageFromFile(original)
+	img, err := vips.NewThumbnailFromFile(original, 300, 300, vips.InterestingNone)
 	if err != nil {
 		fmt.Println(err)
 		return
-	}
-	if err := img.Thumbnail(300, 300, vips.InterestingNone); err != nil {
-		panic(err)
 	}
 
 	image1bytes, _, err := img.ExportNative()
